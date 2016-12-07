@@ -192,13 +192,6 @@ class GameViewController: UIViewController {
     //-----------------------------------------------
   
     
-    //------------------- Send Hiscore --------------
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "HiscoresViewController" {
-        let dvc : HiscoresViewController = segue.destination as! HiscoresViewController
-        dvc.receivedString = highLabelTest.text
-        }
-    }
-    //-----------------------------------------------
+    
     
 }

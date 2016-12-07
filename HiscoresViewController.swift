@@ -10,11 +10,7 @@ import UIKit
 
 class HiscoresViewController: UIViewController {
     
-    var gvc = GameViewController()
-    
     @IBOutlet var hiscoresLabel: UILabel!
-    
-     var receivedString : String!
     
      override func viewDidLoad() {
         super.viewDidLoad()
