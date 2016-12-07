@@ -19,7 +19,8 @@ class HiscoresViewController: UIViewController {
      override func viewDidLoad() {
         super.viewDidLoad()
         var highDefault = UserDefaults.standard
-       hiscoresLabel.text = String(describing: highDefault)
+        let highDefaults = highDefault.string(forKey: "high")
+       hiscoresLabel.text = highDefaults
     }
     
 }

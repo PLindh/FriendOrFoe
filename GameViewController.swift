@@ -101,7 +101,7 @@ class GameViewController: UIViewController {
             high = score
             highLabelTest.text = NSString(format: "High: %i", high) as String
             var highDefault = UserDefaults.standard
-            highDefault.setValue(high, forKey: "high")
+            highDefault.set(high, forKey: "high")
             highDefault.synchronize()
         }
     }
