@@ -75,13 +75,13 @@ class GameViewController: UIViewController {
     @IBAction func onFriendTapped(_ sender: UIButton) {
         if heroesArray.contains(String(characterLabel.text!)) {
             rightOrWrongLabel.textColor = UIColor.green
-            rightOrWrongLabel.text = "Correct"
+            rightOrWrongLabel.text = "Correct\n+1"
             fadeViewInThenOut(delay: 0.5)
             score += 1
         }
         else {
             rightOrWrongLabel.textColor = UIColor.red
-            rightOrWrongLabel.text = "Incorrect"
+            rightOrWrongLabel.text = "Incorrect\n-1"
             fadeViewInThenOut(delay: 0.5)
             score -= 1
         }
@@ -110,13 +110,13 @@ class GameViewController: UIViewController {
     @IBAction func onFoeTapped(_ sender: UIButton) {
         if villainsArray.contains(String(characterLabel.text!)) {
             rightOrWrongLabel.textColor = UIColor.green
-            rightOrWrongLabel.text = "Correct"
+            rightOrWrongLabel.text = "Correct\n+1"
             fadeViewInThenOut(delay: 0.5)
             score += 1
         }
         else {
             rightOrWrongLabel.textColor = UIColor.red
-            rightOrWrongLabel.text = "Incorrect"
+            rightOrWrongLabel.text = "Incorrect\n-1"
             fadeViewInThenOut(delay: 0.5)
             score -= 1
         }
