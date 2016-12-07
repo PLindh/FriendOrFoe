@@ -64,6 +64,7 @@ class GameViewController: UIViewController {
         if time == 0 {
             timer.invalidate()
             displayWinningMessage(message: "Nice Job! Your final score: \(score)")
+            hiscoreMaker()
             resetGame()
         }
     }
@@ -89,7 +90,6 @@ class GameViewController: UIViewController {
             if allCharacters.count == 1 {
                 allCharacters += allCharactersCopy
             }
-            hiscoreMaker()
         }
         scoreLabel.text = NSString(format: "Score: %i", score) as String
         generateRandomCharacter()
@@ -125,7 +125,6 @@ class GameViewController: UIViewController {
             if allCharacters.count == 1 {
                 allCharacters += allCharactersCopy
             }
-            hiscoreMaker()
          }
          scoreLabel.text = NSString(format: "Score: %i", score) as String
         generateRandomCharacter()
