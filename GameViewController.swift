@@ -74,6 +74,7 @@ class GameViewController: UIViewController {
             rightOrWrongLabel.textColor = UIColor.red
             rightOrWrongLabel.text = "Incorrect"
             fadeViewInThenOut(delay: 0.5)
+            score -= 1
         }
         if let index = allCharacters.index(of: characterLabel.text!) {
             allCharacters.remove(at: index)
@@ -109,6 +110,7 @@ class GameViewController: UIViewController {
             rightOrWrongLabel.textColor = UIColor.red
             rightOrWrongLabel.text = "Incorrect"
             fadeViewInThenOut(delay: 0.5)
+            score -= 1
         }
         if let index = allCharacters.index(of: characterLabel.text!) {
             allCharacters.remove(at: index)
