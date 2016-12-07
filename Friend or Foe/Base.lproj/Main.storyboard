@@ -309,6 +309,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="characterLabel" destination="uI0-J4-ad2" id="0bp-Zb-seI"/>
+                        <outlet property="forBtn" destination="7aa-BM-ODo" id="xZr-H7-pc4"/>
+                        <outlet property="friBtn" destination="cQ5-op-bta" id="tb5-Iw-Ebt"/>
                         <outlet property="highLabelTest" destination="nG8-fP-Ma7" id="fIh-YW-8oO"/>
                         <outlet property="rightOrWrongLabel" destination="rOS-r8-srs" id="OXI-tQ-xWK"/>
                         <outlet property="scoreLabel" destination="Tjn-OV-rwc" id="HD3-DY-1lt"/>
@@ -320,7 +322,7 @@
             </objects>
             <point key="canvasLocation" x="2357.5999999999999" y="138.98050974512745"/>
         </scene>
-        <!--Hiscores-->
+        <!--Hiscore-->
         <scene sceneID="x45-a7-6RL">
             <objects>
                 <viewController id="hMT-mk-xDC" customClass="HiscoresViewController" customModule="Friend_or_Foe" customModuleProvider="target" sceneMemberID="viewController">
@@ -332,11 +334,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nice Job!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAp-WB-AkE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highest point amount ever reached:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAp-WB-AkE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -383,7 +385,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Hiscores" id="beJ-dX-YvB"/>
+                    <navigationItem key="navigationItem" title="Hiscore" id="beJ-dX-YvB"/>
                     <connections>
                         <outlet property="hiscoresLabel" destination="PNH-XF-IjL" id="QHq-Ir-QaN"/>
                     </connections>

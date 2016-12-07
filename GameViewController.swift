@@ -16,6 +16,8 @@ class GameViewController: UIViewController {
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var rightOrWrongLabel: UILabel!
     @IBOutlet var highLabelTest: UILabel!
+    @IBOutlet var forBtn: UIButton!
+    @IBOutlet var friBtn: UIButton!
     
     var time = 45
     var timer = Timer()
@@ -31,8 +33,12 @@ class GameViewController: UIViewController {
     var allCharactersCopy =
          ["Wolverine", "Doctor Strange", "Spider-man","Daredevil","Luke Cage","Hal Jordan","Dick Grayson","Iron Man","Jean Grey","Rorschach","Ant-Man","The Thing","Professor X","The Green Arrow","Deadpool","Nick Fury","Cyclops","Hawkeye","Barry Allen","Black Panther","Aquaman,","Hawkman","Beast","Blue Beetle","Gambit","Hank Pym","Black Widow","Nightcrawler","Superboy","Ghost Rider","Wasp","The Flash","Wonder Woman","Rogue","Storm","Shrek","Silver Surfer","Colossus","Captain Marvel","Human Torch","Martian Manhunter","Robin","Mystique","Batman","Iceman","Scarlet Witch","Phoenix","Star-Lord","Vision","Groot","Baby Groot","Raven","Beast Boy","Cyborg","She-Hulk","Hulk","Invisible Woman","Emma Frost","Cable","Iron Fist","Psylocke","Archangel","Rocket Racoon","John Stewart","Nova","Mr. Fantastic","Falcon","Sub Mariner","Havok","Atom","Drax the Destroyer","Gamora","Scott Lang","Jessica Jones","Captain Britain","Captain America","Beta Ray Bill","Hercules","Tick","Squirrel Girl","Taskmaster","Northstar","Elektra","War Machine","Blink","Quicksilver","Juggernaut","Power Man","Thor","Plastic Man","Donna Troy","Steel","Red Tornado","Vixen","Starfire","Huntress","Zatanna","Alan Scott","Mr. Miracle","Big Barda","Booster Gold","Firestorm","Dr. Doom", "Venom", "Loki","Cat Woman","Magneto","Joker","Lex Luthor","Galactus","Darkseid","Ra's Al Ghul","Kingpin","Two-Face","Norman Osborn","Red Skull","Sinestro","Black Adam","Brainiac","Bullseye","Ozymandias","Ultron","Apocalypse","Bizarro","Kid MarvelMan","Captain Cold","Doctor Octopus","Mr. Sinister","General Zod","Professor Zoom","Deathstroke","Bane","Gorilla Grood","Vandal Savage","Zoom","Shredder","Baron Helmut Zemo","Mongul","Deadshot","Sabretooth","Harley Quinn","Doomsday","Thanos","Mephisto","Anti-Monitor","Penguin","Metallo","Kraven the Hunter","Abomination","Sebastian Shaw","Dormammu","Hobgoblin","Scarecrow","Riddler","Parasite","Lizard","Leader","Poison Ivy","Kang","Herr Starr","Mr. Freeze","Lucifer Morningstar","Cheetah","William Stryker","Thunderbolt Ross","Sandman","Clayface","Magog","Mr. Mxyzptlk","Proteus","Lady Deathstrike","Mirror Master","Prometheus","Mandarin","Dr. Sivana","Arthur Light","Mysterio","Electro","Shade","Carnage","Parallax","Omni-Man","Annihilus","Omega Red","Despero","Violator","Mastermind","Fin Fang Foom","M.O.D.O.K","Larfleeze","Larfleeze","Black Hand","Blackheart","Black Manta","Black Mask","Crimson Dynamo","Cyber","Dr. Polaris","Firefly","Harry Osborn","Green Goblin","Hush","Inertia"]
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        friBtn.isEnabled = false
+        forBtn.isEnabled = false
         var highDefault = UserDefaults.standard
         if highDefault.value(forKey: "high") != nil {
             high = highDefault.value(forKey: "high") as! NSInteger!
@@ -43,6 +49,8 @@ class GameViewController: UIViewController {
     
     //---------------- Countdown Timer --------------
     @IBAction func onStartTapped(_ sender: UIButton) {
+        friBtn.isEnabled = true
+        forBtn.isEnabled = true
         //time---
         startButton.setTitle("", for: .normal)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,
