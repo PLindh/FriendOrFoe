@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class HiscoresViewController: UIViewController {
     
@@ -48,6 +49,36 @@ class HiscoresViewController: UIViewController {
         ex.alpha = 1.0
         xLabel.alpha = 1.0
         xLabel.text = "Your Hiscore: " + highDefaults!
+    }
+    
+    @IBAction func twitterPressed(_ sender: UIButton) {
+        let highDefault = UserDefaults.standard
+        let highDefaults = highDefault.string(forKey: "high")
+            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter){
+                let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                twitterSheet.setInitialText("I just got" + highDefaults! + "points on the Friend or Foe app!")
+                self.present(twitterSheet, animated: true, completion: nil)
+            } else {
+                let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
+    @IBAction func facebookPressed(_ sender: UIButton) {
+        let highDefault = UserDefaults.standard
+        let highDefaults = highDefault.string(forKey: "high")
+            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook){
+                let facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                facebookSheet.setInitialText("I just got" + highDefaults! + "points on the Friend or Foe app!")
+                self.present(facebookSheet, animated: true, completion: nil)
+            } else {
+                let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            
+        }
     }
     
 }

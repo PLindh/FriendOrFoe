@@ -370,6 +370,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onFoeTapped:" destination="cO9-LI-ed1" eventType="touchUpInside" id="YfJ-gF-ugv"/>
+                                    <action selector="twitterPressed:" destination="hMT-mk-xDC" eventType="touchUpInside" id="PPb-Vq-44W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgF-RT-shO">
@@ -381,6 +382,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="facebookPressed:" destination="hMT-mk-xDC" eventType="touchUpInside" id="uzo-7h-Xv9"/>
                                     <action selector="onFriendTapped:" destination="cO9-LI-ed1" eventType="touchUpInside" id="PQY-J5-Gvu"/>
                                 </connections>
                             </button>
