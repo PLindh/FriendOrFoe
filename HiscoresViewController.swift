@@ -56,7 +56,7 @@ class HiscoresViewController: UIViewController {
         let highDefaults = highDefault.string(forKey: "high")
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter){
                 let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-                twitterSheet.setInitialText("I just got" + highDefaults! + "points on the Friend or Foe app!")
+                twitterSheet.setInitialText("I just got " + highDefaults! + " points on the Friend or Foe app!")
                 self.present(twitterSheet, animated: true, completion: nil)
             } else {
                 let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.alert)
@@ -71,7 +71,7 @@ class HiscoresViewController: UIViewController {
         let highDefaults = highDefault.string(forKey: "high")
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook){
                 let facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-                facebookSheet.setInitialText("I just got" + highDefaults! + "points on the Friend or Foe app!")
+                facebookSheet.setInitialText("I just got " + highDefaults! + " points on the Friend or Foe app!")
                 self.present(facebookSheet, animated: true, completion: nil)
             } else {
                 let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.alert)
