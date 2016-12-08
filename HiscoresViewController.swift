@@ -18,31 +18,36 @@ class HiscoresViewController: UIViewController {
     @IBOutlet var bronze: UILabel!
     @IBOutlet var silver: UILabel!
     @IBOutlet var gold: UILabel!
+    @IBOutlet var w: UIView!
+    @IBOutlet var b: UIView!
+    @IBOutlet var s: UIView!
+    @IBOutlet var g: UIView!
     
      override func viewDidLoad() {
         super.viewDidLoad()
-        var highDefault = UserDefaults.standard
+        let highDefault = UserDefaults.standard
         let highDefaults = highDefault.string(forKey: "high")
         if Int(highDefaults!)! < 10 {
-            white.alpha = 1.0
-            hiscoresLabel.alpha = 1.0
-            hiscoresLabel.text = "Your Hiscore: " + highDefaults!
+            setOpacity(x: w, ex: white, xLabel: hiscoresLabel)
         }
         else if (Int(highDefaults!)! >= 10 && Int(highDefaults!)! < 30) {
-            bronze.alpha = 1.0
-            bronzeLabel.alpha = 1.0
-            bronzeLabel.text = "Your Hiscore: " + highDefaults!
+            setOpacity(x: b, ex: bronze, xLabel: bronzeLabel)
         }
         else if (Int(highDefaults!)! >= 30 && Int(highDefaults!)! < 50) {
-            silver.alpha = 1.0
-            silverLabel.alpha = 1.0
-            silverLabel.text = "Your Hiscore: " + highDefaults!
+            setOpacity(x: s, ex: silver, xLabel: silverLabel)
         }
         else if Int(highDefaults!)! >= 50 {
-            gold.alpha = 1.0
-            goldLabel.alpha = 1.0
-            goldLabel.text = "Your Hiscore: " + highDefaults!
+           setOpacity(x: g, ex: gold, xLabel: goldLabel)
         }
+    }
+    
+    func setOpacity (x: UIView, ex: UILabel, xLabel: UILabel) {
+        let highDefault = UserDefaults.standard
+        let highDefaults = highDefault.string(forKey: "high")
+        x.alpha = 1.0
+        ex.alpha = 1.0
+        xLabel.alpha = 1.0
+        xLabel.text = "Your Hiscore: " + highDefaults!
     }
     
 }
