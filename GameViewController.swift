@@ -36,7 +36,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var highDefault = UserDefaults.standard
+        let highDefault = UserDefaults.standard
         if highDefault.value(forKey: "high") != nil {
             high = highDefault.value(forKey: "high") as! NSInteger!
             highLabelTest.text = NSString(format: "High: %i", high) as String
@@ -99,7 +99,7 @@ class GameViewController: UIViewController {
         if score > high {
             high = score
             highLabelTest.text = NSString(format: "High: %i", high) as String
-            var highDefault = UserDefaults.standard
+            let highDefault = UserDefaults.standard
             highDefault.set(high, forKey: "high")
             highDefault.synchronize()
         }
