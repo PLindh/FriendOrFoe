@@ -28,10 +28,7 @@ class HiscoresViewController: UIViewController {
      override func viewDidLoad() {
         super.viewDidLoad()
         let highDefault = UserDefaults.standard
-        var highDefaults = highDefault.string(forKey: "high")
-        if highDefaults == nil {
-            highDefaults = "0"
-        }
+        let highDefaults = highDefault.string(forKey: "high")
         if Int(highDefaults!)! < 10 {
             setOpacity(x: w, ex: white, xLabel: hiscoresLabel)
         }
