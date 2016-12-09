@@ -48,6 +48,7 @@ class GameViewController: UIViewController {
     
     //---------------- Countdown Timer --------------
     @IBAction func onStartTapped(_ sender: UIButton) {
+        startButton.isEnabled = false
         friBtn.isEnabled = true
         forBtn.isEnabled = true
         //time---
@@ -178,6 +179,7 @@ class GameViewController: UIViewController {
     
     func resetGame() {
         timer.invalidate()
+        startButton.isEnabled = true
         friBtn.isEnabled = false
         forBtn.isEnabled = false
         rightOrWrongLabel.text = ""

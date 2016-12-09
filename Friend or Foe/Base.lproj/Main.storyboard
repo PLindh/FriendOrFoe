@@ -513,6 +513,7 @@
                         <outlet property="bronze" destination="qhO-sr-tk9" id="nkb-Zv-UkM"/>
                         <outlet property="bronzeLabel" destination="gGm-p2-nyj" id="pSq-Jv-VB9"/>
                         <outlet property="g" destination="MPW-H3-bTw" id="ynj-ou-eg5"/>
+                        <outlet property="g4g" destination="vAp-WB-AkE" id="qIR-y1-SDZ"/>
                         <outlet property="gold" destination="keW-ZS-iuU" id="ha4-3J-5Ye"/>
                         <outlet property="goldLabel" destination="ldf-32-M55" id="5OP-zf-ddI"/>
                         <outlet property="hiscoresLabel" destination="PNH-XF-IjL" id="QHq-Ir-QaN"/>

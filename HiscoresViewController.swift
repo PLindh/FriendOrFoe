@@ -23,11 +23,15 @@ class HiscoresViewController: UIViewController {
     @IBOutlet var b: UIView!
     @IBOutlet var s: UIView!
     @IBOutlet var g: UIView!
+    @IBOutlet var g4g: UILabel!
     
      override func viewDidLoad() {
         super.viewDidLoad()
         let highDefault = UserDefaults.standard
-        let highDefaults = highDefault.string(forKey: "high")
+        var highDefaults = highDefault.string(forKey: "high")
+        if highDefaults == nil {
+            highDefaults = "0"
+        }
         if Int(highDefaults!)! < 10 {
             setOpacity(x: w, ex: white, xLabel: hiscoresLabel)
         }
