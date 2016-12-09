@@ -24,6 +24,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func hiscores(_ sender: UIButton) {
+        let highDefault = UserDefaults.standard
+        let highDefaults = highDefault.string(forKey: "high")
+        if highDefaults != nil {
+            didPlayTap = true
+        }
         if didPlayTap == false {
             makeAlert(title: "Wait!", message: "You must play a full 45 second game and receive a score in order to view Hiscores")
         }
