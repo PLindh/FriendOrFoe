@@ -23,10 +23,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func play(_ sender: UIButton) {
-        didPlayTap = true
-    }
-    
     @IBAction func hiscores(_ sender: UIButton) {
         if didPlayTap == false {
             makeAlert(title: "Wait!", message: "You must play a full 45 second game and receive a score in order to view Hiscores")
