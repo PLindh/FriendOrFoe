@@ -61,8 +61,6 @@ class GameViewController: UIViewController {
         time -= 1
         timeLabel.text = String(time)
         if time == 0 {
-            friBtn.isEnabled = false
-            forBtn.isEnabled = false
             timer.invalidate()
             displayWinningMessage(message: "Nice Job! Your final score: \(score)")
             hiscoreMaker()
@@ -181,6 +179,8 @@ class GameViewController: UIViewController {
     }
     
     func resetGame() {
+        friBtn.isEnabled = false
+        forBtn.isEnabled = false
         rightOrWrongLabel.text = ""
         characterLabel.text = ""
         timeLabel.text = "45"
