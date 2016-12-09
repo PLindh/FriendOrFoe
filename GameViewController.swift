@@ -61,7 +61,6 @@ class GameViewController: UIViewController {
         time -= 1
         timeLabel.text = String(time)
         if time == 0 {
-            timer.invalidate()
             displayWinningMessage(message: "Nice Job! Your final score: \(score)")
             hiscoreMaker()
             resetGame()
@@ -174,11 +173,11 @@ class GameViewController: UIViewController {
     
     //------------------- Reset Game ----------------
     @IBAction func onResetTapped(_ sender: UIBarButtonItem) {
-        timer.invalidate()
         resetGame()
     }
     
     func resetGame() {
+        timer.invalidate()
         friBtn.isEnabled = false
         forBtn.isEnabled = false
         rightOrWrongLabel.text = ""
