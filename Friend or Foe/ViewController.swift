@@ -16,6 +16,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let highDefault = UserDefaults.standard
+        let highDefaults = highDefault.string(forKey: "high")
+        if highDefaults != nil {
+            didPlayTap = true
+        }
     }
     
     @IBAction func play(_ sender: UIButton) {
