@@ -53,6 +53,7 @@
 		3F6225881DEF54F2007DCDC6 /* Friend_or_FoeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend_or_FoeUITests.swift; sourceTree = "<group>"; };
 		3F62258A1DEF54F2007DCDC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6225961DEF924D007DCDC6 /* HowToPlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayController.swift; sourceTree = "<group>"; };
+		3F6E5C2F1DFB3CB000B9BD84 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 				3F62257C1DEF54F2007DCDC6 /* Friend or FoeTests */,
 				3F6225871DEF54F2007DCDC6 /* Friend or FoeUITests */,
 				3F6225661DEF54F2007DCDC6 /* Products */,
+				3F6E5C2E1DFB3CB000B9BD84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +134,14 @@
 				3F62258A1DEF54F2007DCDC6 /* Info.plist */,
 			);
 			path = "Friend or FoeUITests";
+			sourceTree = "<group>";
+		};
+		3F6E5C2E1DFB3CB000B9BD84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F6E5C2F1DFB3CB000B9BD84 /* iAd.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,11 +439,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A5NYZ2DV84;
 				INFOPLIST_FILE = "Friend or Foe/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PL.Friend-or-Foe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -443,11 +454,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A5NYZ2DV84;
 				INFOPLIST_FILE = "Friend or Foe/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PL.Friend-or-Foe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
